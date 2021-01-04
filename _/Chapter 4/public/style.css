@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.prev, .next {
+    font-size: 60%;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+table { 
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #ccc;
+}
+
+table.month {
+    table-layout: fixed;
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+}
+
+table.month td {
+    position: relative;
+    vertical-align: top;
+}
+
+table.month td .date {
+    font-weight: bold;
+    position: absolute;
+    font-size: 100px;
+    bottom: -23px;
+    right: -4px;
+    color: #ececec;
+    z-index: -1;
+}
+
+table.month td:hover {
+    cursor: pointer;
+}
+table.month td:hover .date {
+    color: #ccc;
+}
+td ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 80%;
+    height: 100%;
+    overflow: scroll;
+}
+
+td li {
+    padding: 3px 10px;
+    margin: 2px 0;
+    background: rgba(223, 240, 216, 0.5);
+    border: 1px solid rgb(223, 240, 216);
+}
+
+.splitView > * {
+    width: 45%;
+    margin: 2%;
+    float: left;
+}
+
+table.day tr.highlight td.event {
+    background: rgb(217, 237, 247);
+    color: rgb(53, 103, 132);
+}
+
+table.day tr.highlight.hover td.event {
+    background: rgb(252, 248, 227);
+    color: rgb(53, 103, 132);
+}
+
+table.day td {
+    padding: 4px 0;
+    width: 100px;
+    text-align: center;
+}
+
+table.day td.event {
+    width: 500px;
+}

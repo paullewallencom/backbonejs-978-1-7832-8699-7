@@ -1,0 +1,35 @@
+<% include header %>
+<% include nav %>
+<div id="main"></div>
+<script type='text/template' id='info'>
+    <span class='timer'> 00:00 </span>
+    <span class='score'> 0 points </span>
+</script>
+<script type='text/template' id='clue'>
+    <td>{{ definition }}</td>
+    <td class='word clue'>{{ word.length }} letters</td>
+</script>
+<script type='text/template' id='guess'>
+  <div class='btn text'></div>
+  <div id='guessBtn' class='btn'> Guess </div>
+</script>
+<script type='text/template' id='home'>
+    <h1>Pick a Level:</h1>
+    <h2><a href='/play/1'> Level 1 </a></h2>
+    <h2><a href='/play/2'> Level 2 </a></h2>
+    <h2><a href='/play/3'> Level 3 </a></h2>
+    <h1>Or, check out the <a href='/scoreboard'>scoreboard</a></h1>
+</script>
+<script src="/jquery.js"></script>
+<script src="/underscore.js"></script>
+<script src="/backbone.js"></script>
+<script src="/models.js"></script>
+<script src="/app.js"></script>
+<script src="/router.js"></script>
+<script>
+    var r = new Router({
+        main: $("#main")
+    });
+    Backbone.history.start({ pushState: true });
+</script>
+<% include footer %>

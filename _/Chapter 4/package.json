@@ -1,0 +1,18 @@
+{
+  "name": "calendarApp",
+  "description": "A simple calendar.",
+  "version": "0.1.0",
+  "script": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "3.x.x",
+    "ejs": "~0.8.4",
+    "bourne": "0.3"
+  },
+  "devDependencies": {
+    "nodemon": "latest",
+    "grunt-contrib-jst": "~0.5.1",
+    "grunt": "~0.4.2"
+  }
+}

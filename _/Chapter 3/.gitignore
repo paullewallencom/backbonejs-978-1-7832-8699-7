@@ -1,0 +1,5 @@
+node_modules
+scratch
+**.DS_Store
+db
+public/templates.js

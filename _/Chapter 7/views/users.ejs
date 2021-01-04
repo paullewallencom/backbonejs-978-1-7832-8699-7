@@ -1,0 +1,26 @@
+<% include header %>
+<% include nav %>
+<div id="main">
+    <h1> Scoreboard </h1>
+    <table class="users">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Total Score</th>
+            <th>Best Game</th>
+            <th>Best Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% users.forEach(function(user){ %>
+            <tr>
+                <td><%=: user.username | capitalize %></td>
+                <td><%=  user.totalScore %></td>
+                <td><%= user.score %></td>
+                <td><%=: user.time | time %></td>
+            </tr>
+        <% }); %>
+      </tbody>
+    </table>
+</div>
+<% include footer %>

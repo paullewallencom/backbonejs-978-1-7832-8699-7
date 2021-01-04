@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet"  href="/style.cssx" />
+    </head>
+    <body>
+        <div id="main"></div>
+
+        <script type='text/template' id='appLayout'>
+            <div id='users'></div> 
+            <div id='conversation'></div> 
+            <div id='rooms'></div> 
+            <div id='controls'></div>
+        </script>
+
+        <script type='text/tempalte' id='user'>
+            {{ name }}
+        </script>
+
+        <script type='text/tempalte' id='room'>
+            <a href='/room/{{ name }}'>{{ name }}</a>
+        </script>
+
+        <script type='text/template' id='message'>
+            <strong> {{ user }} </strong>: {{ text }} <span> {{ moment(date).fromNow() }} </span>
+        </script>
+
+        <script type='text/template' id='form'>
+            <input type='text' placeholder='{{placeholder}}' /> <button> {{button}} </button>
+        </script>
+
+        <script src="/jquery.js"></script>
+        <script src="/moment.js"></script>
+        <script src="/underscore.js"></script>
+        <script src="/backbone.js"></script>
+        <script src="/backbone.marionette.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/app.js"></script>
+        <script src="/socket.js"></script>
+        <script src='/users.js'></script>
+        <script src='/rooms.js'></script>
+        <script src='/conversations.js'></script>
+        <script src='/controls.js'></script>
+        <script src='/layout.js'></script>
+        <script src='/router.js'></script>
+        <script>
+            App.start();
+        </script>
+    </body>
+</html>

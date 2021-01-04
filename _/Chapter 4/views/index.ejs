@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <div id="main"></div>
+        <script src="/jquery.js"></script>
+        <script src="/underscore.js"></script>
+        <script src="/moment.min.js"></script>
+        <script src="/backbone.js"></script>
+        <script src="/models.js"></script>
+        <script src="/templates.js"></script>
+        <script src="/views.js"></script>
+        <script src="/router.js"></script>
+        <script>
+            var r = new App.Router({
+                main: $("#main"),
+                calendar: new App.Models.Calendar(<%- events %>)
+            });
+
+            Backbone.history.start({ pushState: true });
+        </script>
+    </body>
+</html>

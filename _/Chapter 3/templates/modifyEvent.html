@@ -1,0 +1,21 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button class="close">&times;</button>
+            <h4 class="modal-title"> {{ heading }} </h4>
+        </div>
+        <div class="modal-body">
+        <form>
+            <label>Title</label>
+            <input type="text" class="form-control" id="title" value="{{title}}" />
+            <label>Details</label>
+            <textarea id="details"  class="form-control">{{details}}</textarea>
+            <label>Date</label>
+            <input type="datetime-local" class="form-control" id="date" value="{{date}}" />    
+        </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="modify btn btn-primary"> {{btnText}} </a>
+        </div>
+    </div>
+</div>

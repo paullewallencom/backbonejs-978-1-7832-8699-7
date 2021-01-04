@@ -1,0 +1,18 @@
+<% include header %>
+<% include nav %>
+<div id='main'>
+  <form method="post" action="/new">
+      <h1> Add a Word </h1>
+      <p>Word:</p>
+      <p><input type='text' name='word' /></p>
+      <p>Definition:</p>
+      <p><input type='text' name='definition' /></p>
+      <p>Level:
+      1 <input type='radio' name='level' value='1' />
+      2 <input type='radio' name='level' value='2' />
+      3 <input type='radio' name='level' value='3' />
+      </p>
+      <p><button>Add</button></p>
+  </form>
+</div>
+<% include footer %>

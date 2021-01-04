@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet"  href="/style.css" />
+    </head>
+    <body>
+        <div id="main"></div>
+        <script type="text/template" id="addPhotoView">
+            <form>
+                <input type="file" id="imageUpload" /><br />
+                <input type="text" id="imageCaption" value="caption" /><br />
+                <button> Upload </button>
+            </form>
+        </script>
+        <script type="text/template" id="photoView">
+            <a href="/photo/{{id}}"><img src="{{path}}" /></a>
+        </script>
+        <script type="text/template" id="userListItemView">
+            <a href="/users/{{id}}">{{username}}</a>
+        </script>
+        <script type="text/template" id="photoPageView">
+            <img src="{{path}}" />
+            <p> {{caption}} <small> by {{username}}</small></p>
+            <div>
+            <textarea id="commentText"></textarea><br />
+            <button> Comment </button>
+            </div>
+            <ul></ul>
+        </script>
+        <script type="text/template" id="commentView">
+            <p><strong>{{username}}</strong> said</p>
+            <p>{{text}}</p>
+        </script>
+        <script type="text/template" id="navView">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/users">All Users</a></li>
+                <li><a href="/users/{{id}}">My Profile</a></li>
+                <li><a href="/upload">Add Photo</a></li>
+                <li>Logged in as <strong>{{ username }}</strong></li>
+                <li><a href="/logout">Log out</a></li>
+            </ul>
+            <hr />
+        </script>
+        <script src="/underscore.js"></script>
+        <script src="/jquery.js"></script>
+        <script src="/backbone.js"></script>
+        <script>var USER = <%- user %>;</script>
+        <script src="/app.js"></script>
+        <script>
+            var r = new AppRouter({ 
+                main: $("#main"),
+                userPhotos: new Photos(<%- userPhotos %>),
+                followingPhotos: new Photos(<%- followingPhotos %>)
+            });
+            Backbone.history.start({ pushState: true });
+        </script>
+    </body>
+</html>

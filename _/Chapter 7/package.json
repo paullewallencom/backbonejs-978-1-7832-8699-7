@@ -1,0 +1,19 @@
+{
+  "name": "wordsApp",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "3.x.x",
+    "ejs": "~0.8.4",
+    "bourne": "0.3",
+    "passport-local": "^1.0.0",
+    "passport": "^0.2.0",
+    "bcrypt": "^0.7.7"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}

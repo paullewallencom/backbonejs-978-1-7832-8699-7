@@ -1,0 +1,79 @@
+body {
+    font-family: sans-serif;  
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#users, #rooms {
+  float: left;
+  width: 13%;
+  margin: 1%;
+  font-size: 80%;
+}
+
+#users li {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.highlight {
+  font-weight: bold;
+  background: #ececec;
+}
+
+#rooms li {
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+}
+#rooms li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 5px;
+}
+#rooms li a:hover {
+  background: #ececec;
+}
+
+#conversation {
+  float: left;
+  width:68%;
+  margin: 1%;
+  margin-bottom: 60px;
+}
+
+#conversation li {
+  padding: 10px;
+  border-bottom: 1px solid #ececec;
+}
+
+#conversation li span {
+  color: #ccc;
+  font-size: 75%;
+  float: right;
+}
+
+#controls {
+  background: #ececec;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#controls input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 300px;
+}
+
+#controls button {
+  border: 1px solid #ccc;
+  background: #efefef;
+  padding: 5px 15px;
+}

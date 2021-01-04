@@ -1,0 +1,20 @@
+body { padding-top: 60px; }
+
+.btn-tools {
+    margin-bottom: 20px;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    background: #fff;
+    color: #000;
+  }
+  100% {
+    background: #b81e0d;
+    color: #fff;
+  }
+}
+
+.loading {
+    -webkit-animation: pulse 1s ease-in-out infinite alternate;
+}

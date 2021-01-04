@@ -1,0 +1,6 @@
+node_modules
+**.DS_STORE
+public/images
+users.json
+comments.json
+photos.json
